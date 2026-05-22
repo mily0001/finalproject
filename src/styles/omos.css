@@ -1,0 +1,63 @@
+.grey p {
+  text-align: left;
+  margin: 0 auto;
+}
+.grey {
+  margin-top: 60px;
+}
+
+.oneos {
+  margin-top: 20px;
+}
+
+.oneos img {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.referencer {
+  max-width: 1300px;
+
+  margin: 50px auto;
+
+  padding: 0 40px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px;
+}
+
+.navneliste {
+  list-style: none;
+
+  background-color: #f8efe5;
+
+  padding: 30px;
+
+  border-radius: 8px;
+}
+
+.referencer h4 {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .referencer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .referencer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .oneos {
+    display: flex;
+  }
+}
