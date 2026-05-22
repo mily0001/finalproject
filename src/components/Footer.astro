@@ -1,0 +1,181 @@
+<footer class="footer">
+  <div class="footer-line"></div>
+
+  <div class="footer-box">
+    <!-- VENSTRE SIDE -->
+    <div class="footer-links">
+      <div class="info-icon">i</div>
+
+      <a href="/omos">Om Lufthavnsvikar</a>
+      <a href="/kontakt">Kontakt</a>
+      <a href="/service">Services</a>
+      <a href="https://lufthavnsvikar.teamtailor.com/"> Karriere </a>
+    </div>
+
+    <!-- HØJRE SIDE -->
+    <div class="footer-contact">
+      <img src="../billeder/logohvid.png" alt="Lufthavnsvikar logo" />
+
+      <p>
+        Terminal 3, 1. sal Vest<br />
+        2770 Kastrup<br />
+        CVR: 30809548<br />
+
+        TLF
+        <a href="tel:+4521390080"> +45 21 39 00 80 </a>
+
+        <br />
+
+        e-mail:<br />
+
+        <a href="mailto:support@lufthavnsvikar.dk"> support@lufthavnsvikar.dk </a>
+      </p>
+
+      <!-- SOCIALS -->
+      <div class="socials">
+        <a href="https://www.instagram.com/lufthavnsvikarlvr" aria-label="Instagram">
+          <img src="../billeder/instagram.png" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/lufthavnsvikar-&-rekrutteringsservice"
+          aria-label="LinkedIn"
+        >
+          <img src="../billeder/linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    padding: 40px 28px;
+  }
+
+  /* TOP LINJE */
+
+  .footer-line {
+    height: 14px;
+    background: #535453;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+
+  /* BOX */
+
+  .footer-box {
+    background: #535453;
+    border-radius: 8px;
+
+    min-height: 380px;
+
+    padding: 70px 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* LINKS */
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-icon {
+    width: 42px;
+    height: 42px;
+
+    background: #f8981c;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+  }
+
+  .footer-links a,
+  .footer-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  .footer-links a:hover,
+  .footer-contact a:hover {
+    color: #f8981c;
+  }
+
+  /* KONTAKT */
+
+  .footer-contact {
+    text-align: right;
+    color: white;
+    font-weight: 700;
+  }
+
+  .footer-contact img {
+    width: 230px;
+    margin-bottom: 25px;
+  }
+
+  .footer-contact p {
+    line-height: 1.4;
+  }
+
+  .footer-contact p a {
+    color: #f8981c;
+  }
+
+  /* SOCIALS */
+
+  .socials {
+    margin-top: 55px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 18px;
+  }
+
+  .socials img {
+    width: 28px;
+    height: 28px;
+
+    object-fit: contain;
+
+    transition: 0.3s;
+  }
+
+  .socials img:hover {
+    transform: scale(1.08);
+    opacity: 0.8;
+  }
+
+  /* RESPONSIVE */
+
+  @media screen and (max-width: 700px) {
+    .footer-box {
+      padding: 45px 30px;
+
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .footer-contact {
+      text-align: left;
+    }
+
+    .socials {
+      justify-content: flex-start;
+    }
+  }
+</style>
