@@ -11,7 +11,10 @@ import MenuScript from './MenuScript.astro';
       </a>
     </div>
 
-    <!-- MENU -->
+    <!-- BESTIL -->
+    <a href="/bestil" class="cta-btn header-cta"> Bestil ledsager </a>
+
+    <!-- NAV -->
     <nav>
       <ul class="menu">
         <li><a href="/">Hjem</a></li>
@@ -27,9 +30,9 @@ import MenuScript from './MenuScript.astro';
       </div>
     </nav>
 
-    <!-- HØJRE KNAPPER -->
+    <!-- EXTRA -->
     <div class="extra-buttons">
-      <!-- JOBSØGENDE / VIRKSOMHEDER -->
+      <!-- ROLE SWITCH -->
       <div class="role-slider">
         <div class="slider-bg"></div>
 
@@ -38,6 +41,7 @@ import MenuScript from './MenuScript.astro';
         <button class="role active" data-role="company"> Virksomheder </button>
       </div>
 
+      <!-- LANGUAGE -->
       <div class="lang-toggle">
         <button class="lang active" data-lang="da">DK</button>
         <span>/</span>
@@ -45,9 +49,6 @@ import MenuScript from './MenuScript.astro';
       </div>
 
       <div id="google_translate_element"></div>
-
-      <!-- BESTIL -->
-      <a href="/bestil" class="cta-btn"> Bestil ledsager </a>
     </div>
   </header>
 </article>
@@ -64,6 +65,7 @@ import MenuScript from './MenuScript.astro';
   header {
     position: sticky;
     top: 0;
+    z-index: 10;
 
     display: flex;
     justify-content: space-between;
@@ -80,12 +82,7 @@ import MenuScript from './MenuScript.astro';
     height: 50px;
   }
 
-  .logo img:hover {
-    width: 252px;
-    height: 52px;
-  }
-
-  /* MENU */
+  /* NAV */
 
   nav {
     display: flex;
@@ -95,8 +92,6 @@ import MenuScript from './MenuScript.astro';
   .menu {
     display: flex;
     list-style: none;
-    margin: 0;
-    padding: 0;
   }
 
   .menu li {
@@ -121,7 +116,7 @@ import MenuScript from './MenuScript.astro';
     font-weight: 400;
   }
 
-  /* HØJRE KNAPPER */
+  /* EXTRA BUTTONS */
 
   .extra-buttons {
     display: flex;
@@ -153,7 +148,6 @@ import MenuScript from './MenuScript.astro';
 
     transition: 0.3s ease;
 
-    /* START PÅ VIRKSOMHEDER */
     transform: translateX(100%);
   }
 
@@ -172,11 +166,7 @@ import MenuScript from './MenuScript.astro';
     color: white;
   }
 
-  .role.active {
-    color: white;
-  }
-
-  /* SPROG */
+  /* LANGUAGE */
 
   .lang-toggle {
     display: flex;
@@ -196,6 +186,10 @@ import MenuScript from './MenuScript.astro';
     font-weight: 600;
   }
 
+  #google_translate_element {
+    display: none;
+  }
+
   /* CTA */
 
   .cta-btn {
@@ -209,6 +203,7 @@ import MenuScript from './MenuScript.astro';
 
     font-weight: 500;
     transition: 0.3s;
+    white-space: nowrap;
   }
 
   .cta-btn:hover {
@@ -233,19 +228,97 @@ import MenuScript from './MenuScript.astro';
     transition: 0.2s linear;
   }
 
-  /* MOBILE */
+  /* TABLET */
 
-  @media screen and (max-width: 800px) {
-    .menu {
-      display: none;
+  @media screen and (max-width: 1000px) {
+    .logo img {
+      width: 200px;
+      height: auto;
     }
 
+    .menu li {
+      margin-right: 10px;
+    }
+
+    .extra-buttons {
+      gap: 10px;
+    }
+
+    .role {
+      padding: 7px 12px;
+      font-size: 12px;
+    }
+
+    .cta-btn {
+      padding: 8px 12px;
+      font-size: 13px;
+    }
+  }
+  /* TABLET */
+  @media screen and (max-width: 1200px) and (min-width: 801px) {
     .extra-buttons {
       display: none;
     }
 
     .burger {
       display: block;
+      margin-left: 35px;
+    }
+
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    .menu li {
+      margin-right: 18px;
+    }
+
+    header.menu-open .extra-buttons {
+      display: flex;
+
+      flex-direction: row;
+      align-items: center;
+      gap: 18px;
+
+      position: absolute;
+
+      top: 70px;
+      right: 25px;
+
+      padding: 18px 22px;
+
+      background: white;
+      border-radius: 18px;
+
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+      z-index: 2;
+    }
+  }
+
+  /* MOBILE */
+  @media screen and (max-width: 800px) {
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu,
+    .extra-buttons {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+      justify-self: end;
+    }
+
+    .header-cta {
+      justify-self: center;
     }
 
     .burger.active .line:nth-child(1) {
@@ -261,29 +334,77 @@ import MenuScript from './MenuScript.astro';
     }
 
     nav.active .menu {
-      display: block;
-      background-color: #ffffff;
+      display: flex;
+
+      flex-direction: column;
+      align-items: flex-start;
 
       position: absolute;
-      top: 94px;
+
+      top: 90px;
       left: 0;
 
       width: 100%;
 
+      padding: 25px 20px 240px;
+
+      background: white;
+
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+
       z-index: 1;
     }
 
     nav.active .menu li {
-      margin: 10px 20px;
+      margin: 6px 0;
     }
 
     nav.active .menu a {
-      font-size: 24px;
+      font-size: 22px;
+      padding-left: 0;
+    }
+
+    header.menu-open .extra-buttons {
+      display: flex;
+
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 14px;
+
+      position: absolute;
+
+      top: 430px;
+      left: 20px;
+
+      width: calc(100% - 40px);
+
+      background: transparent;
+      box-shadow: none;
+
+      z-index: 2;
     }
   }
 
-  #google_translate_element {
-    display: none;
+  /* SMALL MOBILE */
+  /* SMALL MOBILE */
+  @media screen and (max-width: 500px) {
+    .logo img {
+      width: 150px;
+      height: auto;
+    }
+
+    .cta-btn {
+      font-size: 12px;
+      padding: 8px 10px;
+    }
+
+    nav.active .menu a {
+      font-size: 18px;
+    }
+
+    header.menu-open .extra-buttons {
+      top: 430px;
+    }
   }
 </style>

@@ -1,14 +1,14 @@
 <script is:inline>
-  /* BURGER MENU */
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('nav');
+  const header = document.querySelector('header');
 
   burger?.addEventListener('click', () => {
     burger.classList.toggle('active');
     nav.classList.toggle('active');
+    header.classList.toggle('menu-open');
   });
 
-  /* JOBSØGENDE / VIRKSOMHEDER SLIDER */
   const bg = document.querySelector('.slider-bg');
   const roleButtons = document.querySelectorAll('.role');
 
@@ -33,7 +33,6 @@
     });
   });
 
-  /* GOOGLE TRANSLATE */
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
       {
