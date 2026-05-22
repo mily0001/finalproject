@@ -1,0 +1,289 @@
+---
+import MenuScript from './MenuScript.astro';
+---
+
+<article>
+  <header>
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="/">
+        <img src="../billeder/logo.png" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- MENU -->
+    <nav>
+      <ul class="menu">
+        <li><a href="/">Hjem</a></li>
+        <li><a href="/service">Services</a></li>
+        <li><a href="/omos">Om os</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+
+    <!-- HØJRE KNAPPER -->
+    <div class="extra-buttons">
+      <!-- JOBSØGENDE / VIRKSOMHEDER -->
+      <div class="role-slider">
+        <div class="slider-bg"></div>
+
+        <button class="role" data-role="jobs"> Jobsøgende </button>
+
+        <button class="role active" data-role="company"> Virksomheder </button>
+      </div>
+
+      <div class="lang-toggle">
+        <button class="lang active" data-lang="da">DK</button>
+        <span>/</span>
+        <button class="lang" data-lang="en">EN</button>
+      </div>
+
+      <div id="google_translate_element"></div>
+
+      <!-- BESTIL -->
+      <a href="/bestil" class="cta-btn"> Bestil ledsager </a>
+    </div>
+  </header>
+</article>
+
+<MenuScript />
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    background: white;
+  }
+
+  /* LOGO */
+
+  .logo img {
+    width: 250px;
+    height: 50px;
+  }
+
+  .logo img:hover {
+    width: 252px;
+    height: 52px;
+  }
+
+  /* MENU */
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-right: 20px;
+  }
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    color: #535453;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 300;
+  }
+
+  .menu a:hover {
+    color: #f8981c;
+    font-weight: 400;
+  }
+
+  /* HØJRE KNAPPER */
+
+  .extra-buttons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  /* ROLE SLIDER */
+
+  .role-slider {
+    position: relative;
+    display: flex;
+    background: #535453;
+    border-radius: 999px;
+    padding: 4px;
+    overflow: hidden;
+  }
+
+  .slider-bg {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+
+    background: #f8981c;
+    border-radius: 999px;
+
+    transition: 0.3s ease;
+
+    /* START PÅ VIRKSOMHEDER */
+    transform: translateX(100%);
+  }
+
+  .role {
+    position: relative;
+    z-index: 2;
+
+    border: none;
+    background: none;
+
+    padding: 8px 16px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    color: white;
+  }
+
+  .role.active {
+    color: white;
+  }
+
+  /* SPROG */
+
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .lang-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #535453;
+  }
+
+  .lang-toggle button.active {
+    color: #f8981c;
+    font-weight: 600;
+  }
+
+  /* CTA */
+
+  .cta-btn {
+    padding: 10px 16px;
+
+    border: 2px solid #f8981c;
+    border-radius: 70px;
+
+    color: #f8981c;
+    text-decoration: none;
+
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .cta-btn:hover {
+    background: #f8981c;
+    color: white;
+  }
+
+  /* BURGER */
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  /* MOBILE */
+
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+    }
+
+    .extra-buttons {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    nav.active .menu {
+      display: block;
+      background-color: #ffffff;
+
+      position: absolute;
+      top: 94px;
+      left: 0;
+
+      width: 100%;
+
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 24px;
+    }
+  }
+
+  #google_translate_element {
+    display: none;
+  }
+</style>

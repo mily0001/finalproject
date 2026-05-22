@@ -1,0 +1,70 @@
+<script is:inline>
+  /* BURGER MENU */
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('nav');
+
+  burger?.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+
+  /* JOBSØGENDE / VIRKSOMHEDER SLIDER */
+  const bg = document.querySelector('.slider-bg');
+  const roleButtons = document.querySelectorAll('.role');
+
+  if (bg) {
+    bg.style.transform = 'translateX(100%)';
+  }
+
+  roleButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      roleButtons.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if (bg) {
+        bg.style.transform = `translateX(${index * 100}%)`;
+      }
+
+      if (btn.dataset.role === 'jobs') {
+        window.location.href = 'https://lufthavnsvikar.teamtailor.com/';
+      } else {
+        window.location.href = '/';
+      }
+    });
+  });
+
+  /* GOOGLE TRANSLATE */
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'da',
+        includedLanguages: 'da,en',
+        autoDisplay: false,
+      },
+      'google_translate_element'
+    );
+  }
+
+  window.googleTranslateElementInit = googleTranslateElementInit;
+
+  document.querySelectorAll('.lang').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.lang').forEach((b) => {
+        b.classList.remove('active');
+      });
+
+      btn.classList.add('active');
+
+      const lang = btn.dataset.lang;
+      const select = document.querySelector('.goog-te-combo');
+
+      if (select) {
+        select.value = lang;
+        select.dispatchEvent(new Event('change'));
+      }
+    });
+  });
+</script>
+
+<script is:inline src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+></script>
