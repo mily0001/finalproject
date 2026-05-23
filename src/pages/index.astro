@@ -1,7 +1,8 @@
 ---
+import '../styles/index.css';
+import '../styles/style.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import '../styles/style.css';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -18,6 +19,98 @@ import '../styles/style.css';
   <body>
     <main>
       <Header />
+      <div class="opforside">
+        <div class="venop">
+          <h1>Personaleløsninger til <span>lufthavnsvirksomheder</span></h1>
+          <p class="indled">
+            Lufthavnsvikar yder professionelle vikar- og rekrutteringsløsninger til alle slags
+            virksomheder i lufthavnsmiljøet.
+          </p>
+          <div class="buttons">
+            <a href="/" class="hero-btn virksomhed-btn"> For virksomheder </a>
+
+            <a href="https://lufthavnsvikar.teamtailor.com/" class="hero-btn jobs-btn">
+              For jobsøgende
+            </a>
+          </div>
+
+          <div class="kontakt-row">
+            <div class="kontakt-box">
+              <h3>KUNDESUPPORT:</h3>
+              <p>+45-00000000</p>
+            </div>
+
+            <div class="kontakt-box">
+              <h3>REKRUTTERING:</h3>
+              <p>+45-00000000</p>
+            </div>
+          </div>
+        </div>
+        <img src="../billeder/forsidebillede.png" alt="forside" />
+      </div>
+
+      <div class="serviceforside">
+        <div>
+          <h3>Services</h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non laudantium ex accusantium,
+            sequi enim eligendi repellat repudiandae cupiditate suscipit incidunt error iure
+            reiciendis. Incidunt eos quia, saepe voluptatibus sequi fuga reprehenderit, cupiditate
+            autem labore eveniet sed praesentium id earum dolorem commodi asperiores corrupti vero
+            aliquid amet assumenda qui hic dolor. Distinctio ut ea, perspiciatis eos minima fugit
+            porro necessitatibus. Qui quas sed fuga a maiores, libero natus, deserunt consequatur
+            quae nostrum, dolor voluptas vitae nobis!
+          </p>
+        </div>
+        <div class="serviceicon">
+          <a href="/service1">
+            <div class="icon">
+              <img src="../billeder/airline.png" alt="airline" />
+              <h4>Airline Services</h4>
+            </div>
+          </a>
+          <a href="/service2">
+            <div class="icon">
+              <img src="../billeder/ledsager.png" alt="airline" />
+              <h4>Ledsager</h4>
+            </div>
+          </a>
+          <a href="/service3">
+            <div class="icon">
+              <img src="../billeder/kurser.png" alt="airline" />
+              <h4>Kurser</h4>
+            </div>
+          </a>
+          <a href="/service4">
+            <div class="icon">
+              <img src="../billeder/retail.png" alt="airline" />
+              <h4>Retail og promotion</h4>
+            </div>
+          </a>
+          <a href="/service5">
+            <div class="icon">
+              <img src="../billeder/vikar.png" alt="airline" />
+              <h4>Vikar</h4>
+            </div>
+          </a>
+          <a href="/service6">
+            <div class="icon">
+              <img src="../billeder/search.png" alt="airline" />
+              <h4>Search and select</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <h2>Kunder hos os</h2>
+      <div class="kunder">
+        <img src="../billeder/taxfree.png" alt="airline" />
+        <img src="../billeder/cph.png" alt="airline" />
+        <img src="../billeder/emirates.png" alt="airline" />
+        <img src="../billeder/dhl.png" alt="airline" />
+        <img src="../billeder/sas.png" alt="airline" />
+        <img src="../billeder/klm.png" alt="airline" />
+      </div>
 
       <Footer />
     </main>

@@ -1,0 +1,159 @@
+.buttons {
+  display: flex;
+  gap: 18px;
+  margin: 20px 0 0 60px;
+}
+
+.hero-btn {
+  display: inline-block;
+
+  padding: 14px 28px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+/* VIRKSOMHED = ORANGE */
+
+.virksomhed-btn {
+  background: #f8981c;
+  color: white;
+}
+
+.virksomhed-btn:hover {
+  background: #df830f;
+}
+
+/* JOBS = GRÅ */
+
+.jobs-btn {
+  background: #535453;
+  color: white;
+}
+
+.jobs-btn:hover {
+  background: #3f403f;
+}
+
+h1 span {
+  color: #f8981c;
+}
+
+.opforside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.opforside img {
+  width: 100%;
+  max-height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 0 28px 28px 0;
+}
+
+.kontakt-row {
+  display: flex;
+
+  margin: -10px 0 20px 30px;
+}
+
+.kontakt-box h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.kontakt-box p {
+  color: #f8981c;
+  font-weight: 700;
+  margin-top: -15px;
+}
+
+.indled {
+  margin-left: 20px;
+}
+
+.icon img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.serviceicon a {
+  text-decoration: none;
+}
+
+.serviceicon {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin: 50px;
+  gap: 40px;
+}
+
+.serviceforside {
+  background-color: #f8efe5;
+  padding: 10px 10px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.kunder img {
+  width: auto;
+  height: 50px;
+  opacity: 0.7;
+  margin: 0 auto;
+}
+
+.kunder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 70px;
+  margin: 50px;
+}
+
+@media screen and (max-width: 800px) {
+  .opforside img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .serviceicon {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .opforside img {
+    height: 500px;
+  }
+
+  .serviceforside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-top: 70px;
+  }
+
+  .kunder {
+    display: flex;
+  }
+}
