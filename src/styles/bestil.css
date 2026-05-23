@@ -1,0 +1,149 @@
+.booking-form {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #f8efe5;
+  border-radius: 14px;
+}
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 34px;
+
+  align-items: start;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-icon {
+  font-size: 28px;
+  margin-bottom: 18px;
+}
+
+.booking-form input,
+.booking-form textarea,
+.booking-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid #535453;
+  border-radius: 7px;
+  background: white;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.booking-form textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-section {
+  min-width: 0;
+}
+
+.question {
+  font-size: 13px;
+
+  line-height: 1.5;
+
+  max-width: 220px;
+
+  margin-bottom: 12px;
+
+  color: #535453;
+}
+
+.booking-form label {
+  display: block;
+
+  margin: 0 0 8px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  color: #535453;
+}
+
+.submit-btn {
+  margin-top: 30px;
+  padding: 14px 38px;
+  border: none;
+  border-radius: 999px;
+  background: #f8981c;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.form-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  margin-bottom: 18px;
+  margin-top: 15px;
+}
+
+.extra-icon {
+  margin-top: 28px;
+}
+.form-row {
+  align-items: start;
+}
+
+label {
+  margin-left: 50px;
+}
+
+.bestil-btn {
+  display: inline-block;
+
+  padding: 14px 48px;
+
+  margin: 50px 0 20px 200px;
+
+  border: 3px solid #f8981c;
+  border-radius: 999px;
+
+  color: #f8981c;
+  background: transparent;
+
+  text-decoration: none;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  transition: 0.3s;
+}
+
+.bestil-btn:hover {
+  background: #f8981c;
+  color: white;
+}
+
+/* Mobil */
+@media screen and (max-width: 800px) {
+  .booking-form {
+    padding: 28px 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

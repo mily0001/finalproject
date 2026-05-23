@@ -1,5 +1,6 @@
 ---
 import '../styles/style.css';
+import '../styles/bestil.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
@@ -18,6 +19,168 @@ import Footer from '../components/Footer.astro';
   <body>
     <main>
       <Header />
+
+      <h1>Bestil Ledsager</h1>
+      <p>
+        Ved at udfylde denne formular kan du online bestille en autoriseret Ledsager gennem
+        Lufthavnsvikar.
+      </p>
+
+      <div class="booking-form">
+        <div class="form-grid">
+          <!-- VENSTRE SIDE -->
+          <section class="form-section">
+            <img src="billeder/bestil1.png" alt="" class="form-icon" />
+
+            <label for="company-name">Virksomhedens navn:</label>
+            <input type="text" id="company-name" name="company_name" />
+
+            <label for="cvr">Virksomhedens CVR:</label>
+            <input type="text" id="cvr" name="cvr" />
+
+            <label>Virksomhedens faktureringsadresse:</label>
+            <input type="text" name="street" placeholder="Gade" />
+
+            <div class="form-row">
+              <input type="text" name="zipcode" placeholder="Postnummer" />
+              <input type="text" name="city" placeholder="By" />
+            </div>
+
+            <label for="company-email">e-mail:</label>
+            <input type="email" id="company-email" name="company_email" />
+
+            <label for="contact-name">Navn på kontaktperson:</label>
+            <input type="text" id="contact-name" name="contact_name" />
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" />
+
+            <label for="contact-email">e-mail:</label>
+            <input type="email" id="contact-email" name="contact_email" />
+
+            <label for="description">Beskrivelse af arbejde:</label>
+            <textarea id="description" name="description"></textarea>
+          </section>
+
+          <!-- HØJRE SIDE -->
+          <section class="form-section">
+            <img src="billeder/bestil2.png" alt="" class="form-icon" />
+
+            <label for="guest-name">Navn på gæster:</label>
+            <input type="text" id="guest-name" name="guest_name" />
+
+            <div class="form-row">
+              <div>
+                <label for="start-time">Starttidspunkt:</label>
+                <input type="datetime-local" id="start-time" name="start_time" />
+              </div>
+
+              <div>
+                <label for="end-time">Forventet sluttidspunkt:</label>
+                <input type="datetime-local" id="end-time" name="end_time" />
+              </div>
+            </div>
+
+            <label for="guide">Lods:</label>
+            <select id="guide" name="guide">
+              <option value=""></option>
+              <option value="terminal">Terminal-lods</option>
+              <option value="vip">VIP-lods</option>
+              <option value="security">Security-lods</option>
+            </select>
+
+            <label for="meeting-place">Mødested:</label>
+            <select id="meeting-place" name="meeting_place">
+              <option value=""></option>
+              <option value="terminal-2">Hovedvagt / Bil (Åbningstid: 00:00-24:00)</option>
+              <option value="terminal-3">Adgangsregistreringen / gående</option>
+              <option value="ankomst">Ankomsthallen</option>
+            </select>
+
+            <label for="notes">Andre bemærkninger:</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <img src="billeder/bestil3.png" alt="" class="form-icon" />
+
+            <div class="form-row">
+              <div>
+                <p class="question">
+                  Ønskes tilkøb af synlighedsveste? (kun hvis airside færdsel kræves)
+                </p>
+
+                <label for="vests">Synlighedsveste:</label>
+                <select id="vests" name="vests">
+                  <option value=""></option>
+                  <option value="ja">Ja</option>
+                  <option value="nej">Nej</option>
+                </select>
+              </div>
+
+              <div>
+                <p class="question">Kræver besøgsområdet brug af værnemidler?</p>
+
+                <label for="ppe">Værnemidler:</label>
+                <select id="ppe" name="ppe">
+                  <option value=""></option>
+                  <option value="ja">Ja</option>
+                  <option value="nej">Nej</option>
+                </select>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <p><strong>Særlige betingelser for udførsel af ledsagelse i Københavns Lufthavne.</strong></p>
+      <p>
+        <strong>1)</strong> Lufthavnsvikar´s gæsteledsagere er autoriseret af CPH med henblik på at ledsage
+        besøgende i alle sikkerhedszoner på lufthavnens afspærrede områder, herunder ledsagelse på vegne
+        af andre relevante virksomheder. <strong>2)</strong> En virksomhed, herunder den person i virksomheden,
+        der bestiller en ledsageropgave, har det fulde ansvar for de besøgendes arbejdsbetingede ærinde
+        på airside, samt alle forudgående instruktioner, og særlige forhold og aftaler i forbindelse hermed.
+        <strong>3)</strong> Virksomheden, herunder den person i virksomheden, der bestiller ledsageropgaven,
+        er ansvarlig for at give Lufthavnsvikar helt præcise oplysninger omkring opgavens art, formål,
+        varighed, antal besøgende, mødested, kontaktperson, besøgsområde(r), og evt. særlige adgangsveje
+        samt definere virksomhedens forventninger til os inden opgavens start. Oplysningerne skal fremgå
+        af aftalekontrakten. <strong>4)</strong> Lufthavnsvikar forpligter sig til på vegne af kunden,
+        der bestiller ledsageropgaven, at følge de af myndighederne fastlagte regler for besøgende på
+        lufthavnens afspærrede områder, herunder ledsagelse af besøgende på lufthavnens afspærrede områder.
+        <strong>5)</strong> Lufthavnsvikar har ikke ansvar for eventuelle igangværende arbejders udførelse,
+        kvalitet og resultat, og fraskriver sig ansvaret for tabt arbejdsfortjeneste, skader ved udført
+        eller manglende udført arbejde, der som følge af gæstebesøget bliver standset af os, vores udsendte
+        gæsteledsager, CPH eller andre udøvende myndigheder. <strong>6)</strong>
+        Lufthavnsvikar kan ikke gøres erstatningsansvarlig hvis en ledsager bliver syg og må stoppe gæstebesøget
+        tidligere end aftalt, eller ved manglende fremmøde på grund af sygedom eller andet - (Lufthavnsvikar
+        vil altid gøre alt hvad der er muligt for at finde alternative løsninger, hvis der sker noget
+        uforudset) <strong>7)</strong> Lufthavnsvikar leverer ikke de påbudte sikkerheds- og værnemidler.
+        <strong>8)</strong> Fakturering for udført arbejde af Lufthavnsvikar´s gæsteledsagere aftales
+        på forhånd, og skal fremgå af aftalekontraktens indhold om opgavens varighed. <strong
+          >9)</strong
+        > Ved eventuelle forsinkelser under gæstebesøget, som ikke skyldes Lufthavnsvikar eller vores
+        gæsteledsager, vil kunden blive faktureret pr. hele time ud over den aftalte tidsperiode. <strong
+          >10)</strong
+        > Lufthavnsvikar eller ansvarlig gæsteledsager forbeholder sig retten til at vurdere opgaven og
+        gæstebesøgets relevans i henhold til specifikke regler for lovligt tjenstlige ærinde i Københavns
+        Lufthavn. <strong>11)</strong> Lufthavnsvikar eller ansvarlig gæsteledsager har ret til, uden
+        varsel, at stoppe en planlagt eller igangværende ledsageropgave, hvis opgaven eller gæstebesøget
+        ikke: 1. lever op til myndighedernes fastlagte regler for besøgende på lufthavnens afspærrede
+        områder. 2. Det planlagte arbejde afviger fra aftalen mellem kundevirksomhed, eventuel underleverandør
+        og Lufthavnsvikar - eller CPH. <strong>12)</strong>
+        Gæstebesøget modtager på dagen en obligatorisk briefing af gæsteledsager ang. retningslinjer inden
+        adgang til lufthavnens afspærrede områder. <strong>13)</strong> Rapportering af uregelmæssigheder
+        vil ske til kontaktpersonen i den virksomhed, der har bestilt opgaven, såvel som til øvrige relevante
+        myndigheder. <strong>14)</strong> Lufthavnsvikar fakturerer pr. påbegyndt time - og minimum 3
+        timer. <strong>15)</strong> Annulleres en opgave senest kl. 17.00 dagen før starttidspunktet faktureres
+        0,- kr. <strong>16)</strong> Betalingsbetingelser er 8 dage netto kontant, eller ifølge særskilt
+        aftale.
+      </p>
+
+      <label class="checkbox">
+        <input type="checkbox" name="accept" />
+        Jeg accepterer betingelserne
+      </label>
+
+      <a href="/bestil" class="bestil-btn"> Send bestilling </a>
 
       <Footer />
     </main>

@@ -1,0 +1,60 @@
+.orange {
+  background-color: #f6f6f6;
+
+  padding: 0px 20px;
+  margin-top: 20px;
+}
+
+.kontakt-row {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.kontakt-box {
+  text-align: center;
+}
+
+.kontakt-box h3 {
+  font-size: 15px;
+
+  margin-bottom: 10px;
+
+  color: black;
+}
+
+.kontakt-box p {
+  color: #f8981c;
+
+  font-size: 2.5vw;
+  font-weight: 700;
+
+  margin: 0;
+
+  margin-bottom: 50px;
+  margin-left: 30px;
+}
+
+.kontaktkolonner {
+  margin: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  .kontaktkolonner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 40px;
+    margin: 50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .kontaktkolonner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 40px;
+  }
+}

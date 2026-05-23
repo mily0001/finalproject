@@ -1,7 +1,9 @@
 ---
 import '../styles/style.css';
+import '../styles/kontakt.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import KontaktKort from '../components/KontaktKort.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -19,6 +21,102 @@ import Footer from '../components/Footer.astro';
     <main>
       <Header />
 
+      <h1>Kontakt</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque blanditiis cumque illo,
+        animi architecto optio sint eveniet! Dolorum ipsa, tenetur rem voluptas maxime vel accusamus
+        aperiam assumenda! Nulla delectus quibusdam accusantium laudantium laborum non quasi neque
+      </p>
+
+      <div class="orange">
+        <div class="kontakt-row">
+          <div class="kontakt-box">
+            <h3>KUNDESUPPORT:</h3>
+            <p>+45-00000000</p>
+          </div>
+
+          <div class="kontakt-box">
+            <h3>REKRUTTERING:</h3>
+            <p>+45-00000000</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kontaktkolonner">
+        <div class="kundesupport">
+          <h2>Medarbejdere i kundesupport</h2>
+          <KontaktKort />
+          <KontaktKort
+            navn="Edina Pilavac"
+            rolle="Kundesupport"
+            telefon="+45 2178 3455"
+            email="ep@lufthavnsvikar.dk"
+          />
+          <KontaktKort
+            navn="Calle Eliasson"
+            rolle="Kundesupport"
+            telefon="+45 9388 2139"
+            email="ce@lufthavnsvikar.dk"
+          />
+        </div>
+
+        <div class="indehavere">
+          <h2>Indehavre og partnere</h2>
+          <KontaktKort />
+          <KontaktKort
+            navn="Peter Urhammer"
+            rolle="Partner"
+            telefon="+45 2139 0081"
+            email="pu@lufthavnsvikar.dk"
+          />
+          <KontaktKort
+            navn="Sofie Højmose Olesen"
+            rolle="Indehaver"
+            telefon="+45 3028 7705"
+            email="sh@lufthavnsvikar.dk"
+          />
+          <KontaktKort
+            navn="Sofie Højmose Olesen"
+            rolle="Indehaver"
+            telefon="+45 3028 7705"
+            email="sh@lufthavnsvikar.dk"
+          />
+        </div>
+
+        <div class="promotion">
+          <h2>Promotion</h2>
+          <KontaktKort />
+          <KontaktKort
+            navn="Lykke Ellingsen "
+            rolle="Promotion Planner"
+            telefon="+45 9387 2139"
+            email="le@lufthavnsvikar.dk"
+          />
+          <KontaktKort
+            navn="Sofie Højmose Olesen"
+            rolle="Indehaver"
+            telefon="+45 3028 7705"
+            email="sh@lufthavnsvikar.dk"
+          />
+        </div>
+
+        <div class="promotion">
+          <h2>Medarbejdere i administrationen</h2>
+          <KontaktKort />
+          <KontaktKort
+            navn="Lykke Ellingsen "
+            rolle="Promotion Planner"
+            telefon="+45 9387 2139"
+            email="le@lufthavnsvikar.dk"
+          />
+          <KontaktKort
+            navn="Sofie Højmose Olesen"
+            rolle="Indehaver"
+            telefon="+45 3028 7705"
+            email="sh@lufthavnsvikar.dk"
+          />
+        </div>
+      </div>
       <Footer />
     </main>
   </body>
