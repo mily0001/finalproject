@@ -18,7 +18,26 @@ import MenuScript from './MenuScript.astro';
     <nav>
       <ul class="menu">
         <li><a href="/">Hjem</a></li>
-        <li><a href="/service">Services</a></li>
+
+        <li class="dropdown">
+          <a href="/service" class="dropdown-toggle">
+            Services
+            <span class="arrow">⌄</span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a href="/service1">Airline Service</a></li>
+
+            <li><a href="/service2">Ledsagere</a></li>
+
+            <li><a href="/service3">Kurser</a></li>
+
+            <li><a href="/service4">Retail og promotion</a></li>
+
+            <li><a href="/service5">Vikar</a></li>
+            <li><a href="/service6">Search and Select</a></li>
+          </ul>
+        </li>
         <li><a href="/omos">Om os</a></li>
         <li><a href="/kontakt">Kontakt</a></li>
       </ul>
@@ -114,6 +133,69 @@ import MenuScript from './MenuScript.astro';
   .menu a:hover {
     color: #f8981c;
     font-weight: 400;
+  }
+
+  /* DROPDOWN */
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 240px;
+
+    padding: 12px 0;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+    list-style: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition: 0.25s ease;
+
+    z-index: 20;
+  }
+
+  .dropdown-menu li {
+    margin: 0;
+  }
+
+  .dropdown-menu a {
+    display: block;
+
+    padding: 12px 20px;
+
+    color: #535453;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+  }
+
+  .dropdown-menu a:hover {
+    background: #f8efe5;
+
+    color: #f8981c;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
   }
 
   /* EXTRA BUTTONS */
@@ -226,6 +308,22 @@ import MenuScript from './MenuScript.astro';
     background-color: #333333;
     margin-bottom: 5px;
     transition: 0.2s linear;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .arrow {
+    font-size: 12px;
+
+    transition: transform 0.3s ease;
+  }
+
+  .dropdown:hover .arrow {
+    transform: rotate(180deg);
   }
 
   /* TABLET */
@@ -405,6 +503,39 @@ import MenuScript from './MenuScript.astro';
 
     header.menu-open .extra-buttons {
       top: 430px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .dropdown-menu {
+      position: static;
+
+      opacity: 1;
+      visibility: visible;
+
+      transform: none;
+
+      box-shadow: none;
+
+      background: transparent;
+
+      padding: 0 0 0 20px;
+
+      min-width: unset;
+    }
+
+    .dropdown-menu a {
+      font-size: 18px;
+
+      padding: 8px 0;
+
+      color: #777;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .dropdown-menu {
+      display: none;
     }
   }
 </style>

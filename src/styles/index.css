@@ -123,6 +123,10 @@ h1 span {
   margin: 50px;
 }
 
+.serviceicon a:hover {
+  transform: scale(1.03);
+}
+
 @media screen and (max-width: 800px) {
   .opforside img {
     display: none;

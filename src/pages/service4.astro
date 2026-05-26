@@ -1,7 +1,9 @@
 ---
 import '../styles/style.css';
+import '../styles/servicesider.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import ServiceSide from '../components/ServiceSide.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -12,11 +14,75 @@ import Footer from '../components/Footer.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
 
-    <title>Retail og promotion</title>
+    <title>Retail og Promotion</title>
   </head>
   <body>
     <main>
       <Header />
+
+      <ServiceSide
+        title="RETAIL OG PROMOTION"
+        image="/billeder/retailbild.png"
+        icon="/billeder/retail.png"
+        textOne="Vi tilbyder luftfartsselskaber, groundhandlere, rejsebureauer og andre interessenter i lufthavnen repræsentation og supervision i henhold til deres behov. Vi tænker, handler og udfører de til enhver tid opstillede opgaver på vegne af kunden og skræddersyr vores produkt til de foreliggende krav.
+For mere uddybende information er du velkommen til at kigge i folderen nedenfor."
+        textTwo="Lorem500 ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam, repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam laudantium autem sed deserunt facilis earum, obcaecati "
+        pdfText="Produkt brochure"
+        pdfLink="/pdf/terms.pdf"
+        pdfIcon="/billeder/pdf.png"
+      />
+
+      <div class="grey"></div>
+
+      <div class="resten">
+        <div class="serviceafsnit">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate
+            assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam,
+            repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam
+            laudantium autem sed deserunt facilis earum, obcaecati voluptates officiis, nesciunt
+            neque doloribus vitae inventore incidunt reprehenderit blanditiis ducimus assumenda
+            quae? Minus quo fugit odio corporis maxime sunt voluptatem enim aspernatur quasi
+            perferendis, ratione suscipit facere harum temporibus voluptates quisquam dolores
+            incidunt officia error, id, neque reprehenderit. Voluptatibus blanditiis adipisci
+            voluptate consectetur molestiae optio eaque ut deleniti asperiores labore id a odio ea
+            maxime, ab praesentium. Placeat, quod?
+          </p>
+        </div>
+
+        <div class="serviceafsnit">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate
+            assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam,
+            repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam
+            laudantium autem sed deserunt facilis earum, obcaecati voluptates officiis, nesciunt
+            neque doloribus vitae inventore incidunt reprehenderit blanditiis ducimus assumenda
+            quae? Minus quo fugit odio corporis maxime sunt voluptatem enim aspernatur quasi
+            perferendis, ratione suscipit facere harum temporibus voluptates quisquam dolores
+            incidunt officia error, id, neque reprehenderit. Voluptatibus blanditiis adipisci
+            voluptate consectetur molestiae optio eaque ut deleniti asperiores labore id a odio ea
+            maxime, ab praesentium. Placeat, quod?
+          </p>
+        </div>
+
+        <div class="serviceafsnit">
+          <h2>Lorem ipsum</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate
+            assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam,
+            repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam
+            laudantium autem sed deserunt facilis earum, obcaecati voluptates officiis, nesciunt
+            neque doloribus vitae inventore incidunt reprehenderit blanditiis ducimus assumenda
+            quae? Minus quo fugit odio corporis maxime sunt voluptatem enim aspernatur quasi
+            perferendis, ratione suscipit facere harum temporibus voluptates quisquam dolores
+            incidunt officia error, id, neque reprehenderit. Voluptatibus blanditiis adipisci
+            voluptate consectetur molestiae optio eaque ut deleniti asperiores labore id a odio ea
+            maxime, ab praesentium. Placeat, quod?
+          </p>
+        </div>
+      </div>
 
       <Footer />
     </main>
