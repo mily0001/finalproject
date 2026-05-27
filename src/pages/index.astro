@@ -18,6 +18,11 @@ import Footer from '../components/Footer.astro';
   </head>
   <body>
     <main>
+      <div id="loader">
+        <video autoplay muted playsinline id="loader-video">
+          <source src="/animation/lufthavnsvikar_1.mp4" type="video/mp4" />
+        </video>
+      </div>
       <Header />
       <div class="opforside">
         <div class="venop">
@@ -113,5 +118,23 @@ import Footer from '../components/Footer.astro';
 
       <Footer />
     </main>
+    <script is:inline>
+      window.addEventListener('load', () => {
+        const loader = document.querySelector('#loader');
+        const video = document.querySelector('#loader-video');
+
+        if (video) {
+          video.playbackRate = 1.5;
+        }
+
+        setTimeout(() => {
+          loader.classList.add('hide');
+
+          setTimeout(() => {
+            loader.remove();
+          }, 600);
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
