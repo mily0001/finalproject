@@ -4,6 +4,9 @@ import '../styles/servicesider.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import ServiceSide from '../components/ServiceSide.astro';
+import '../styles/kontakt.css';
+import KontaktKort from '../components/KontaktKort.astro';
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -24,62 +27,99 @@ import ServiceSide from '../components/ServiceSide.astro';
         title="KURSER"
         image="/billeder/kurserbild.png"
         icon="/billeder/kurser.png"
-        textOne="Vi tilbyder luftfartsselskaber, groundhandlere, rejsebureauer og andre interessenter i lufthavnen repræsentation og supervision i henhold til deres behov. Vi tænker, handler og udfører de til enhver tid opstillede opgaver på vegne af kunden og skræddersyr vores produkt til de foreliggende krav.
-For mere uddybende information er du velkommen til at kigge i folderen nedenfor."
-        textTwo="Lorem500 ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam, repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam laudantium autem sed deserunt facilis earum, obcaecati "
-        pdfText="Produkt brochure"
-        pdfLink="/pdf/terms.pdf"
-        pdfIcon="/billeder/pdf.png"
+        textOne=""
+        textTwo="Der er i luftfartsbranchen et stort behov for at uddanne og opkvalificere medarbejderne således at deres kompetencer til en hver tid matcher de daglige safety- og security udfordringer i lufthavnen. Virksomheder der ønsker at opkvalificere deres medarbejderes kompetencer i forhold til Security Awarness, køre-rettigheder på platformen eller udvidet visitor kursus er velkommen til at kontakte os for yderligere information og priser. 
+
+Lufthavnsvikar tilbyder også hjælp med baggrundstjek af medarbejdere til virksomheder i Lufthavnen.
+
+Hvis I har brug for et sted til undervisning har vi lokaleplads til 14 deltagere.
+
+                                                                                                                                 Pris pr. dag: DKK 1.500,-
+
+Vi tilbyder derudover online kurser i samarbejde med Butterfly Training inden for Security Awarness samt Dangerous Goods"
+        pdfText=""
+        pdfLink=""
+        pdfIcon=""
       />
 
-      <div class="grey"></div>
+      <div class="grey">
+        <section class="service-nav">
+          <a href="#faerdselsundervisning"> Færdselsundervisning på airside </a>
+
+          <a href="#oevrige-kurser"> Øvrige kurser </a>
+
+          <a href="#butterfly-kursus"> Butterfly kursus </a>
+        </section>
+      </div>
 
       <div class="resten">
-        <div class="serviceafsnit">
-          <h2>Lorem ipsum</h2>
+        <div class="serviceafsnit" id="faerdselsundervisning">
+          <h2>Færdselsundervisning på Airside</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate
-            assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam,
-            repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam
-            laudantium autem sed deserunt facilis earum, obcaecati voluptates officiis, nesciunt
-            neque doloribus vitae inventore incidunt reprehenderit blanditiis ducimus assumenda
-            quae? Minus quo fugit odio corporis maxime sunt voluptatem enim aspernatur quasi
-            perferendis, ratione suscipit facere harum temporibus voluptates quisquam dolores
-            incidunt officia error, id, neque reprehenderit. Voluptatibus blanditiis adipisci
-            voluptate consectetur molestiae optio eaque ut deleniti asperiores labore id a odio ea
-            maxime, ab praesentium. Placeat, quod?
+            Lufthavnsvikar tilbyder færdsels-træning og det efterfølgende trænings-tjek på
+            Lufthavnens afspærrede områder. Har du et tjenstligt ærinde der kræver en eller anden
+            form for færden på airside, er det nødvendigt at gennemføre den obligatoriske
+            færdselsuddannelse, som består af:
           </p>
+          <p>
+            Et online kursus indeholdende 4 moduler (Safety Awareness, Færselskursus Klasse 1-2,
+            Praktisk Færdselstræning, og endelig et Træningstjek (Proficiency Check)).
+          </p>
+          <p>Sådan gør du:</p>
+          <p>
+            Online kurserne ligger tilgængeligt på din CPH kursus profil:
+            https://cph.eloomi.com/login Klik på Færdselskurser, derefter det relevante
+            færdselsprogram og gennemfør følgende kurser: A: Safety Awarenes og B: Færdselskursus
+            klasse 1-2 (A og B SKAL være udført og bestået før du kan aflægge prøve i din relevante
+            færdselsklasse)
+          </p>
+          <p>
+            Herefter kan du booke tid til praktisk færdselstræning* (Kursus varighed 1-2 timer,
+            afhængig af færdselsklasse, evt. tidligere erfaring, trafik mm).
+          </p>
+          <p>
+            Endelig skal du aflægge en prøve med en Færdsels assessor (Træningstjek el. Proficiency
+            tjek).
+          </p>
+          <p>
+            Har du behov for uddybende forklaring til de nye regler i forhold til færdselsuddannelse
+            i Lufthavnen, er du meget velkommen til at kontakte vores Færdselsinstruktør.
+          </p>
+          <p>- eller kontakt Lufthavnsvikars Færdselsinstruktør, Paw Sørensen:</p>
+          <KontaktKort
+            navn="Paw Sørensen"
+            rolle="Kundesupport"
+            telefon="+45 2139 4494"
+            email="ps@lufthavnsvikar.dk"
+          />
+        </div>
+        <div class="serviceafsnit" id="oevrige-kurser">
+          <h2>Øvrige kuser</h2>
+          <p>
+            Virksomheder der ønsker at opkvalificere deres medarbejderes kompetencer i forhold til
+            Security Awareness, køre-rettigheder på platformen eller udvidet visitor kursus er
+            velkommen til at kontakte os for yderligere information og priser. Vi har dedikerede
+            kursusinstruktører med flere års erfaring i lufthavnen.
+          </p>
+          <p>Vores praktiske kurser omfatter:</p>
+          <p>
+            Praktisk Security Awareness kursus, gennemgang i relevante områder: DKK 450,- pr.
+            deltager
+          </p>
+          <p>
+            Praktisk Visitor Escort kursus, gennemgang i relevante områder, samt indskrivning: DKK
+            799,- pr. deltager
+          </p>
+          <p>Praktisk Aircraft Search and protect, LVR kursusbevis: DKK 799,- pr. deltager</p>
         </div>
 
-        <div class="serviceafsnit">
-          <h2>Lorem ipsum</h2>
+        <div class="serviceafsnit" id="butterfly-kursus">
+          <h2>Butterfly kurser</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate
-            assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam,
-            repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam
-            laudantium autem sed deserunt facilis earum, obcaecati voluptates officiis, nesciunt
-            neque doloribus vitae inventore incidunt reprehenderit blanditiis ducimus assumenda
-            quae? Minus quo fugit odio corporis maxime sunt voluptatem enim aspernatur quasi
-            perferendis, ratione suscipit facere harum temporibus voluptates quisquam dolores
-            incidunt officia error, id, neque reprehenderit. Voluptatibus blanditiis adipisci
-            voluptate consectetur molestiae optio eaque ut deleniti asperiores labore id a odio ea
-            maxime, ab praesentium. Placeat, quod?
-          </p>
-        </div>
-
-        <div class="serviceafsnit">
-          <h2>Lorem ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro incidunt cupiditate
-            assumenda nesciunt architecto, odio voluptas atque, possimus sit aut accusamus nam,
-            repellendus praesentium error. A sit, expedita dolorem nemo placeat fugiat ipsam
-            laudantium autem sed deserunt facilis earum, obcaecati voluptates officiis, nesciunt
-            neque doloribus vitae inventore incidunt reprehenderit blanditiis ducimus assumenda
-            quae? Minus quo fugit odio corporis maxime sunt voluptatem enim aspernatur quasi
-            perferendis, ratione suscipit facere harum temporibus voluptates quisquam dolores
-            incidunt officia error, id, neque reprehenderit. Voluptatibus blanditiis adipisci
-            voluptate consectetur molestiae optio eaque ut deleniti asperiores labore id a odio ea
-            maxime, ab praesentium. Placeat, quod?
+            Lufthavnsvikar har indledt et samarbejde med Butterfly training, der er Europas førende
+            leverandør af online kurser og træning indenfor transportområdet; til lands, til vands
+            og i luften. Online kurserne er godkendt af Trafikstyrelsen og IATA og findes på dansk,
+            svensk, norsk og engelsk.
           </p>
         </div>
       </div>
