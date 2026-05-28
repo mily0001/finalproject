@@ -307,8 +307,8 @@
 
 @media screen and (max-width: 700px) {
   #loader-video {
-    object-fit: contain;
-    transform: translateX(-3%);
+    object-fit: cover;
+    transform: translateX(-6%);
   }
 }
 
