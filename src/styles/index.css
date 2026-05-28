@@ -310,3 +310,9 @@
   pointer-events: none;
   transition: opacity 0.15s ease;
 }
+
+@media screen and (max-width: 700px) {
+  #loader-video {
+    transform: translateX(-4%);
+  }
+}
