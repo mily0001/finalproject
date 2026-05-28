@@ -305,14 +305,15 @@
   object-fit: cover;
 }
 
+@media screen and (max-width: 700px) {
+  #loader-video {
+    object-fit: contain;
+    transform: translateX(-3%);
+  }
+}
+
 #loader.hide {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.15s ease;
-}
-
-@media screen and (max-width: 700px) {
-  #loader-video {
-    transform: translateX(-4%);
-  }
 }
