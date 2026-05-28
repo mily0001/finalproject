@@ -187,5 +187,48 @@ h1 span {
   opacity: 0;
   pointer-events: none;
 
-  transition: opacity 0.02s ease;
+  transition: opacity 0.002s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .opforside {
+    display: block;
+    padding: 0 24px;
+    text-align: left;
+  }
+
+  .venop {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .indled {
+    margin-left: 0;
+  }
+
+  .buttons {
+    margin: 24px 0 0 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .kontakt-row {
+    margin: 25px 0 20px 0;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  .serviceforside {
+    margin: 30px 20px 0;
+    padding: 24px;
+  }
+
+  .serviceicon {
+    margin: 35px 0;
+    gap: 28px;
+  }
+
+  .kunder {
+    margin: 40px 24px;
+  }
 }
