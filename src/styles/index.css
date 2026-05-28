@@ -1,25 +1,21 @@
+/* HERO KNAPPER */
+
 .buttons {
   display: flex;
   gap: 18px;
-  margin: 20px 0 0 60px;
+  margin: 25px 0;
 }
 
 .hero-btn {
   display: inline-block;
-
   padding: 14px 28px;
-
   border-radius: 999px;
-
   text-decoration: none;
-
   font-weight: 700;
   font-size: 16px;
-
   transition: 0.3s;
+  text-align: center;
 }
-
-/* VIRKSOMHED = ORANGE */
 
 .virksomhed-btn {
   background: #f8981c;
@@ -30,8 +26,6 @@
   background: #df830f;
 }
 
-/* JOBS = GRÅ */
-
 .jobs-btn {
   background: #535453;
   color: white;
@@ -41,223 +35,214 @@
   background: #3f403f;
 }
 
-h1 span {
-  color: #f8981c;
-}
+/* HERO */
 
 .opforside {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+
+.venop {
+  max-width: 560px;
+}
+
+.opforside h1 {
+  margin: 0 0 25px;
+  color: #535453;
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 1.1;
+}
+
+.opforside h1 span {
+  color: #f8981c;
+  display: block;
+}
+
+.indled {
+  padding: 0;
+  margin: 0;
+  max-width: 520px;
+  text-align: left;
+  line-height: 1.5;
 }
 
 .opforside img {
   width: 100%;
   max-height: 420px;
-
   object-fit: cover;
-
   border-radius: 0 28px 28px 0;
 }
 
+/* KONTAKT INFO */
+
 .kontakt-row {
   display: flex;
-
-  margin: -10px 0 20px 30px;
+  gap: 60px;
+  margin-top: 35px;
 }
 
 .kontakt-box h3 {
   font-size: 15px;
-  margin-bottom: 4px;
+  margin: 0 0 8px;
 }
 
 .kontakt-box p {
+  padding: 0;
+  margin: 0;
   color: #f8981c;
   font-weight: 700;
-  margin-top: -15px;
+  text-align: left;
 }
 
-.indled {
-  margin-left: 20px;
+/* SERVICES */
+
+.serviceforside {
+  background-color: #f8efe5;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 60px 20px 0;
 }
 
-.icon img {
-  width: 150px;
-  height: auto;
-  margin: 0 auto;
-  margin-bottom: 15px;
+.serviceforside p {
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+  line-height: 1.5;
 }
 
-.serviceicon a {
-  text-decoration: none;
+.serviceforside h3 {
+  margin: 0;
 }
 
 .serviceicon {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  margin: 50px;
+  margin-top: 40px;
   gap: 40px;
 }
 
-.serviceforside {
-  background-color: #f8efe5;
-  padding: 10px 10px;
-  border-radius: 20px;
-  margin-top: 30px;
-}
-
-.kunder img {
-  width: auto;
-  height: 50px;
-  opacity: 0.7;
-  margin: 0 auto;
-}
-
-.kunder {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 70px;
-  margin: 50px;
+.serviceicon a {
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .serviceicon a:hover {
   transform: scale(1.03);
 }
 
-@media screen and (max-width: 800px) {
-  .opforside img {
-    display: none;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
+.icon img {
+  width: 150px;
+  height: auto;
+  margin: 0 auto 15px;
 }
 
+/* KUNDER */
+
+.kunder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  justify-content: center;
+  margin: 50px;
+}
+
+.kunder img {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  margin: 0 auto;
+}
+
+/* DESKTOP */
+
 @media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 40px;
+  .serviceforside {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 
   .serviceicon {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .opforside img {
-    height: 500px;
-  }
-
-  .serviceforside {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-top: 70px;
-  }
-
   .kunder {
     display: flex;
+    align-items: center;
   }
 }
 
-#loader {
-  position: fixed;
-  inset: 0;
-
-  width: 100%;
-  height: 100vh;
-
-  z-index: 9999;
-
-  overflow: hidden;
-
-  background: black;
-}
-
-#loader-video {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-}
-
-#loader.hide {
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 0.002s ease;
-}
+/* MOBIL */
 
 @media screen and (max-width: 800px) {
-  .opforside {
-    display: flex;
-    flex-direction: column;
-
-    padding: 0 20px;
+  html,
+  body {
     overflow-x: hidden;
   }
 
-  .venop {
-    width: 100%;
-    max-width: 100%;
+  .opforside {
+    display: block;
+    margin: 45px auto;
+    padding: 0 24px;
+    overflow: hidden;
+  }
 
-    margin: 0;
-    padding: 0;
+  .venop {
+    max-width: 100%;
   }
 
   .opforside h1 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-
-    margin-top: 30px;
-    margin-bottom: 20px;
-
-    word-break: break-word;
+    font-size: 38px;
+    line-height: 1.08;
+    margin-bottom: 24px;
+    overflow-wrap: anywhere;
   }
 
   .opforside h1 span {
-    display: block;
-    font-size: 2.3rem;
+    font-size: 38px;
+    overflow-wrap: anywhere;
+  }
+
+  .opforside img {
+    display: none;
   }
 
   .indled {
-    margin: 0;
-
-    font-size: 1.1rem;
+    font-size: 18px;
     line-height: 1.5;
-
+    padding: 0;
     text-align: left;
+    word-spacing: normal;
   }
 
   .buttons {
-    display: flex;
     flex-direction: column;
-
     gap: 16px;
-
-    margin: 30px 0;
+    margin: 35px 0;
   }
 
   .hero-btn {
     width: 100%;
-    max-width: 100%;
-
-    text-align: center;
+    padding: 16px 24px;
   }
 
   .kontakt-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
-
-    margin: 30px 0;
+    gap: 22px;
+    margin-top: 45px;
   }
 
   .kontakt-box {
-    width: 100%;
+    min-width: 0;
   }
 
   .kontakt-box h3 {
@@ -265,14 +250,63 @@ h1 span {
   }
 
   .kontakt-box p {
-    margin-top: 5px;
-
-    font-size: 1.2rem;
-
+    font-size: 18px;
+    overflow-wrap: anywhere;
     text-decoration: none;
   }
 
-  .opforside img {
-    display: none;
+  .serviceforside {
+    margin: 50px 20px 0;
+    padding: 35px 24px;
+    overflow: hidden;
   }
+
+  .serviceicon {
+    grid-template-columns: 1fr 1fr;
+    margin: 35px 0 0;
+    gap: 35px 18px;
+  }
+
+  .icon img {
+    width: 115px;
+  }
+
+  .icon h4 {
+    font-size: 16px;
+  }
+
+  .kunder {
+    margin: 45px 24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 30px;
+    overflow: hidden;
+  }
+
+  .kunder img {
+    max-width: 130px;
+  }
+}
+
+/* LOADER */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  overflow: hidden;
+  background: white;
+}
+
+#loader-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#loader.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
 }
