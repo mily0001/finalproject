@@ -68,3 +68,12 @@ h4 {
   color: #535453;
   font-weight: 900;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+* {
+  max-width: 100%;
+}

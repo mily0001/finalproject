@@ -14,7 +14,7 @@ const {
 
   <p>
     Telefon:
-    <a href={`tel:${telefon}`}>{telefon}</a>
+    <a class="telefon-link" href={`tel:${telefon}`}>{telefon}</a>
   </p>
 
   <p>
@@ -26,46 +26,40 @@ const {
 <style>
   .kontakt-kort {
     background: #f8efe5;
-
     border-radius: 34px;
-
-    padding: 28px;
-
+    padding: 24px;
     max-width: 400px;
-    margin: 0 auto;
-
-    margin-top: 15px;
+    margin: 15px auto 0;
   }
 
   .kontakt-kort h3 {
     font-size: 20px;
     font-weight: 700;
-
     color: #535453;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    margin: 5px 0 10px;
   }
 
   .rolle {
     font-size: 15px;
-
     color: #535453;
-
     margin-bottom: 12px;
   }
 
   .kontakt-kort p {
+    padding: 0;
+    margin: 0 0 10px;
     font-size: 15px;
-
     color: #535453;
-
-    margin-bottom: 10px;
+    text-align: left;
   }
 
   .kontakt-kort a {
     color: #f8981c;
-
     text-decoration: none;
+  }
+
+  .telefon-link {
+    white-space: nowrap;
   }
 
   .kontakt-kort a:hover {
@@ -74,19 +68,24 @@ const {
 
   @media screen and (max-width: 700px) {
     .kontakt-kort {
-      padding: 20px;
+      padding: 22px;
       border-radius: 24px;
-
-      max-width: 480px;
+      max-width: 340px;
     }
 
     .kontakt-kort h3 {
-      font-size: 24px;
+      font-size: 22px;
     }
 
     .rolle,
     .kontakt-kort p {
-      font-size: 20px;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+
+    .kontakt-kort a {
+      word-break: normal;
+      overflow-wrap: normal;
     }
   }
 </style>
