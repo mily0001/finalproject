@@ -8,23 +8,28 @@
 .kontakt-row {
   display: flex;
   justify-content: center;
+  align-items: center;
+
   gap: 40px;
 
   margin: 30px 0;
-  padding: 0 20px;
+  padding: 35px 20px;
 
   flex-wrap: nowrap;
 }
 
 .kontakt-box {
   min-width: 0;
+  text-align: center;
 }
 
 .kontakt-box h3 {
   font-size: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 
   color: #535453;
+
+  white-space: nowrap;
 }
 
 .kontakt-box p {
@@ -36,22 +41,65 @@
   white-space: nowrap;
 
   text-decoration: none;
+
+  font-size: 28px;
+  line-height: 1.1;
 }
 
+.kontakt-box p a {
+  color: #f8981c;
+  text-decoration: none;
+}
+
+.kontakt-box p a:visited,
+.kontakt-box p a:active {
+  color: #f8981c;
+  text-decoration: none;
+}
+
+/* MOBIL */
+
 @media screen and (max-width: 700px) {
+  .orange {
+    padding: 0;
+  }
+
   .kontakt-row {
-    justify-content: space-between;
-    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 30px 10px;
+    margin: 0;
+  }
+
+  .kontakt-box {
+    text-align: center;
   }
 
   .kontakt-box h3 {
-    font-size: 12px;
+    font-size: 11px;
+    margin-bottom: 6px;
   }
 
   .kontakt-box p {
     font-size: 15px;
+
+    white-space: nowrap;
   }
-}
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.1;
+
+    padding: 0 20px;
+  }
+
+  p {
+    word-spacing: normal;
+    line-height: 1.5;
+  }
 }
 
 .kontaktkolonner {
@@ -62,7 +110,9 @@
   .kontaktkolonner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     justify-content: center;
+
     gap: 40px;
     margin: 50px;
   }
@@ -72,7 +122,9 @@
   .kontaktkolonner {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+
     justify-content: center;
+
     gap: 40px;
   }
 }
