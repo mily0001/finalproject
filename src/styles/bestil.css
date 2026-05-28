@@ -142,6 +142,19 @@ label {
   background: #f8981c;
   color: white;
 }
+.booking-form .question {
+  padding: 0;
+  margin: 0 0 12px;
+
+  max-width: 260px;
+
+  text-align: left;
+  word-spacing: normal;
+  line-height: 1.4;
+
+  font-size: 13px;
+  color: #535453;
+}
 
 /* Mobil */
 @media screen and (max-width: 800px) {
@@ -169,5 +182,17 @@ label {
     padding: 16px 24px;
 
     font-size: 16px;
+  }
+
+  .booking-form .question {
+    max-width: 100%;
+    padding: 0;
+    text-align: left;
+    word-spacing: normal;
+  }
+
+  .question-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
