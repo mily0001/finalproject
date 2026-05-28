@@ -84,17 +84,28 @@ import Footer from '../components/Footer.astro';
             <label for="guide">Lods:</label>
             <select id="guide" name="guide">
               <option value=""></option>
-              <option value="terminal">Terminal-lods</option>
-              <option value="vip">VIP-lods</option>
-              <option value="security">Security-lods</option>
+              <option value="terminal">Ingen lods tak</option>
+              <option value="vip">Ledsager kan sidde med i vores bil</option>
+              <option value="security"
+                >Ledsager skal have bil med (bil faktureres med 149kr pr. time)</option
+              >
             </select>
 
             <label for="meeting-place">Mødested:</label>
             <select id="meeting-place" name="meeting_place">
               <option value=""></option>
               <option value="terminal-2">Hovedvagt / Bil (Åbningstid: 00:00-24:00)</option>
-              <option value="terminal-3">Adgangsregistreringen / gående</option>
-              <option value="ankomst">Ankomsthallen</option>
+              <option value="terminal-3"
+                >Adgangsregistreringen / gående (T2-vest) (Åbningstid: 04:00-23:00 / weeekend
+                06:00-18:00)</option
+              >
+              <option value="terminal-2"
+                >Msglebylillevagt / bil (Åbningstid: 05:30 - 22:00 / weekend lukket / sluse)</option
+              >
+              <option value="terminal-2"
+                >Sydvagt / bil (Åbningstid; 06:30-17:30 / weekend lukket / sluse)</option
+              >
+              <option value="ankomst">Nordvagt / gående (Åbningstid: 04:45-22:55)</option>
             </select>
 
             <label for="notes">Andre bemærkninger:</label>
@@ -111,8 +122,8 @@ import Footer from '../components/Footer.astro';
                 <label for="vests">Synlighedsveste:</label>
                 <select id="vests" name="vests">
                   <option value=""></option>
-                  <option value="ja">Ja</option>
-                  <option value="nej">Nej</option>
+                  <option value="ja">Nej tak</option>
+                  <option value="nej">Ja tak</option>
                 </select>
               </div>
 
@@ -122,8 +133,10 @@ import Footer from '../components/Footer.astro';
                 <label for="ppe">Værnemidler:</label>
                 <select id="ppe" name="ppe">
                   <option value=""></option>
-                  <option value="ja">Ja</option>
-                  <option value="nej">Nej</option>
+                  <option value="ja">Nej</option>
+                  <option value="nej">Sikkerhedssko</option>
+                  <option value="nej">Sikkerhedssko og hjelm</option>
+                  <option value="nej">Ved ikke</option>
                 </select>
               </div>
             </div>
