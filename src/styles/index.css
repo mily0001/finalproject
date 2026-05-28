@@ -203,12 +203,10 @@
     font-size: 38px;
     line-height: 1.08;
     margin-bottom: 24px;
-    overflow-wrap: anywhere;
   }
 
   .opforside h1 span {
     font-size: 38px;
-    overflow-wrap: anywhere;
   }
 
   .opforside img {
@@ -308,6 +306,24 @@
 @media screen and (max-width: 700px) {
   #loader-video {
     object-position: 55% center;
+  }
+
+  .opforside h1 {
+    font-size: 38px;
+    line-height: 1.08;
+    margin-bottom: 24px;
+
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+
+  .opforside h1 span {
+    font-size: 38px;
+
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
   }
 }
 
