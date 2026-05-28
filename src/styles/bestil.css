@@ -107,11 +107,14 @@ label {
 }
 
 .bestil-btn {
-  display: inline-block;
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
 
   padding: 14px 48px;
 
-  margin: 50px 0 20px 200px;
+  margin: 50px auto 20px;
 
   border: 3px solid #f8981c;
   border-radius: 999px;
@@ -123,8 +126,16 @@ label {
 
   font-size: 18px;
   font-weight: 700;
+  text-align: center;
 
   transition: 0.3s;
+
+  width: fit-content;
+}
+
+.bestil-btn:hover {
+  background: #f8981c;
+  color: white;
 }
 
 .bestil-btn:hover {
@@ -145,5 +156,18 @@ label {
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .bestil-btn {
+    display: flex;
+
+    width: 100%;
+    max-width: 320px;
+
+    margin: 40px auto 10px;
+
+    padding: 16px 24px;
+
+    font-size: 16px;
   }
 }
