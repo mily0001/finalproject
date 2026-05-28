@@ -22,3 +22,23 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .serviceafsnit p {
+    text-align: left;
+    padding: 20px 24px 0 24px;
+    max-width: 100%;
+    line-height: 1.6;
+    word-spacing: normal;
+    hyphens: none;
+  }
+
+  .serviceafsnit h2 {
+    padding: 0 24px;
+    line-height: 1.1;
+  }
+
+  .resten {
+    overflow-x: hidden;
+  }
+}
