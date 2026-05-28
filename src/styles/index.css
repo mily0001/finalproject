@@ -194,41 +194,65 @@ h1 span {
   .opforside {
     display: block;
     padding: 0 24px;
-    text-align: left;
+    overflow: hidden;
   }
 
   .venop {
-    max-width: 420px;
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
+  }
+
+  .opforside h1 {
+    font-size: 3rem;
+    line-height: 1.05;
+    margin-top: 40px;
+  }
+
+  .opforside h1 span {
+    display: block;
+    font-size: 2.8rem;
   }
 
   .indled {
     margin-left: 0;
+    margin-top: 24px;
+
+    text-align: left;
+    line-height: 1.5;
   }
 
   .buttons {
-    margin: 24px 0 0 0;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin: 35px 0;
+
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 320px;
+
+    text-align: center;
   }
 
   .kontakt-row {
-    margin: 25px 0 20px 0;
-    justify-content: center;
-    gap: 28px;
+    margin: 40px 0;
+
+    justify-content: space-between;
+    gap: 20px;
   }
 
-  .serviceforside {
-    margin: 30px 20px 0;
-    padding: 24px;
+  .kontakt-box {
+    flex: 1;
   }
 
-  .serviceicon {
-    margin: 35px 0;
-    gap: 28px;
+  .kontakt-box p {
+    margin-top: 0;
+    text-decoration: none;
   }
 
-  .kunder {
-    margin: 40px 24px;
+  .opforside img {
+    display: none;
   }
 }
